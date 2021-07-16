@@ -4,16 +4,12 @@ import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components";
 import { color } from "styled-system";
 
-const StyledButton = styled.TouchableHighlight`
-    border-radius: 50px;
-`;
-
 export default function Button({ children, gradient, style = {}, onPress }) {
     return (
-        <StyledButton
-            style={[style]}
+        <TouchableHighlight
+            style={[styles.touchable, style]}
             activeOpacity={0.6}
-            underlayColor="#ffffff"
+            underlayColor="#000000"
             onPress={onPress}
             fontColor="accent"
         >
@@ -27,18 +23,22 @@ export default function Button({ children, gradient, style = {}, onPress }) {
             ) : (
                 children
             )}
-        </StyledButton>
+        </TouchableHighlight>
     );
 }
 
 const styles = StyleSheet.create({
     touchable: {
-        borderRadius: 50,
+        width: 100,
+        borderRadius: "50%",
+        alignItems: "center",
+        justifyContent: "center",
+        top: -25,
     },
     button: {
         width: 70,
         height: 70,
-        borderRadius: 50,
+        borderRadius: "50%",
         alignItems: "center",
         justifyContent: "center",
         elevation: 5, //android only. needs shadow effect if ever on ios

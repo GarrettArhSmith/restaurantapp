@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function Menu(props) {
+export default function Cart(props) {
     return (
         <View>
-            <Text>Menu</Text>
+            <Text>Cart</Text>
         </View>
     );
 }

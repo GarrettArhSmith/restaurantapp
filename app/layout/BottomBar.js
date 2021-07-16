@@ -15,7 +15,7 @@ const StyledBottomBar = styled(Animated.View)`
     border-top-left-radius: 30px;
 `;
 
-export default function BottomBar(props) {
+export default function BottomBar({ navigation }) {
     const [searchToggle, setSearchToggle] = useState(false);
     const searchAnim = useRef(new Animated.Value(80)).current;
 
@@ -47,6 +47,7 @@ export default function BottomBar(props) {
                         name="heart-outline"
                         size={30}
                         color={theme.colors.darkGray}
+                        onPress={() => navigation.navigate("Favorites")}
                     />
                 </Button>
                 <Button gradient style={{ top: -25 }} onPress={handlePress}>

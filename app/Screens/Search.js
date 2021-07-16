@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function Menu(props) {
+export default function Search(props) {
     return (
         <View>
-            <Text>Menu</Text>
+            <Text>Search</Text>
         </View>
     );
 }
